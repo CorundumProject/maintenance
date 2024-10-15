@@ -1346,7 +1346,7 @@ cls
 echo Corumdum
 echo.
 echo Corundum is free, open-source software based on the GPL-3.0 license.
-echo Corundum is currently installed in version 1.1.0-stable.
+echo Corundum is currently installed in version 1.1.1-stable.
 echo.
 echo Press any key to return to home.
 pause > nul
