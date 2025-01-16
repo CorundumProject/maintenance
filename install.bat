@@ -1,5 +1,5 @@
 @echo off
-title Corundum Setup
+title Corundum maintenance - Setup
 
 NET SESSION >nul 2>&1
 if %errorlevel% NEQ 0 (
@@ -7,7 +7,7 @@ if %errorlevel% NEQ 0 (
     exit /b
 )
 
-if exist "%USERPROFILE%\Corundum" (
+if exist "%USERPROFILE%\Corundum maintenance" (
     goto CorundumInstalled
 ) else (
     goto StartInstallation
@@ -16,12 +16,12 @@ if exist "%USERPROFILE%\Corundum" (
 :StartInstallation
 echo Installation
 echo.
-echo Welcome to the Corundum installation wizard.
+echo Welcome to the Corundum maintenance installation wizard.
 echo.
-echo The Corundum version in this package is v1.1.1-stable.
+echo The Corundum maintenance version in this package is v1.1.1-stable.
 echo.
 echo Please choose the installation method:
-echo 1. Install Corundum on the hard disk
+echo 1. Install Corundum maintenance on the hard disk
 echo 2. Choose a location for the portable installation
 set /p choice="Enter your choice: "
 
@@ -35,9 +35,9 @@ goto StartInstallation
 cls
 echo Installation
 echo.
-echo Corundum can be started when your Windows session starts.
+echo Corundum maintenance can be started when your Windows session starts.
 echo.
-echo Would you like to launch Corundum when your Windows session starts?
+echo Would you like to launch Corundum maintenance when your Windows session starts?
 echo 1. Enable this option
 echo 2. Disable this option
 echo 3. Exit
@@ -54,10 +54,10 @@ goto StartCorundumStartup
 cls
 echo Installation
 echo.
-echo You are about to install Corundum on your local hard disk (C:). You have selected automatic execution at login for user %USERNAME%.
+echo You are about to install Corundum maintenance on your local hard disk (C:). You have selected automatic execution at login for user %USERNAME%.
 echo.
 echo Please choose the installation method:
-echo 1. Install Corundum
+echo 1. Install Corundum maintenance
 echo 2. Go back
 set /p install="Enter your choice: "
 
@@ -71,28 +71,28 @@ goto InstallHardDisk
 cls
 echo Installation
 echo.
-echo Thank you for choosing Corundum! In a few moments, Corundum will be installed on your computer.
+echo Thank you for choosing Corundum maintenance! In a few moments, Corundum maintenance will be installed on your computer.
 echo Stay on this window, the installation won't last long!
 echo.
-echo Status: Creating the Corundum folder...
+echo Status: Creating the Corundum maintenance folder...
 mkdir "%USERPROFILE%\Corundum" > nul
 echo Status: Copying files...
-copy "%~dp0\main.bat" "%USERPROFILE%\Corundum" > nul
-copy "%~dp0\install.bat" "%USERPROFILE%\Corundum" > nul
-xcopy "%~dp0\utility" "%USERPROFILE%\Corundum\utility" /s /e /i > nul
-copy "%~dp0\README.md" "%USERPROFILE%\Corundum" > nul
-copy "%~dp0\LICENSE" "%USERPROFILE%\Corundum" > nul
+copy "%~dp0\main.bat" "%USERPROFILE%\Corundum maintenance" > nul
+copy "%~dp0\install.bat" "%USERPROFILE%\Corundum maintenance" > nul
+xcopy "%~dp0\utility" "%USERPROFILE%\Corundum maintenance\utility" /s /e /i > nul
+copy "%~dp0\README.md" "%USERPROFILE%\Corundum maintenance" > nul
+copy "%~dp0\LICENSE" "%USERPROFILE%\Corundum maintenance" > nul
 cls
 
 :: Création du raccourci dans le menu Démarrer (peu importe le choix de démarrage)
 echo Installation
 echo.
-echo Thank you for choosing Corundum! In a few moments you'll be able to enjoy Corundum directly on your computer.
+echo Thank you for choosing Corundum maintenance! In a few moments you'll be able to enjoy Corundum maintenance directly on your computer.
 echo Stay on this window, the installation won't last long!
 echo.
 echo Status: Creating the shortcut...
 
-set "target=%USERPROFILE%\Corundum\main.bat"
+set "target=%USERPROFILE%\Corundum maintenance\main.bat"
 set "shortcut_folder=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Enio Aiello"
 set "shortcut_name=Corundum.lnk"
 
@@ -111,10 +111,10 @@ del "%vbs_file%" > nul
 cls
 echo Installation
 echo.
-echo Thank you for choosing Corundum! In a few moments, Corundum will be installed on your computer.
+echo Thank you for choosing Corundum maintenance! In a few moments, Corundum maintenance will be installed on your computer.
 echo Stay on this window, the installation won't last long!
 echo.
-echo Status: Adding Corundum to startup...
+echo Status: Adding Corundum maintenance to startup...
 set "shortcut_folder=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
 if not exist "%shortcut_folder%" (
     mkdir "%shortcut_folder%"
@@ -132,7 +132,7 @@ del "%vbs_file%" > nul
 cls
 echo Installation
 echo.
-echo Thank you for choosing Corundum! In a few moments you'll be able to enjoy Corundum directly on your computer.
+echo Thank you for choosing Corundum maintenance! In a few moments you'll be able to enjoy Corundum maintenance directly on your computer.
 echo Stay on this window, the installation won't last long!
 echo.
 echo Status: Installation completed!
@@ -143,10 +143,10 @@ goto End
 cls
 echo Installation
 echo.
-echo You are about to install Corundum on your local hard disk (C:).
+echo You are about to install Corundum maintenance on your local hard disk (C:).
 echo.
 echo Please choose the installation method:
-echo 1. Install Corundum
+echo 1. Install Corundum maintenance
 echo 2. Go back
 set /p install="Enter your choice: "
 
@@ -160,21 +160,21 @@ goto InstallHardDisk
 cls
 echo Installation
 echo.
-echo Thank you for choosing Corundum! In a few moments, Corundum will be installed on your computer.
+echo Thank you for choosing Corundum maintenance! In a few moments, Corundum maintenance will be installed on your computer.
 echo Stay on this window, the installation won't last long!
 echo.
-echo Status: Creating the Corundum folder...
+echo Status: Creating the Corundum maintenance folder...
 mkdir "%USERPROFILE%\Corundum" > nul
 echo Status: Copying files...
-copy "%~dp0\main.bat" "%USERPROFILE%\Corundum" > nul
-copy "%~dp0\install.bat" "%USERPROFILE%\Corundum" > nul
-xcopy "%~dp0\utility" "%USERPROFILE%\Corundum\utility" /s /e /i > nul
-copy "%~dp0\README.md" "%USERPROFILE%\Corundum" > nul
-copy "%~dp0\LICENSE" "%USERPROFILE%\Corundum" > nul
+copy "%~dp0\main.bat" "%USERPROFILE%\Corundum maintenance" > nul
+copy "%~dp0\install.bat" "%USERPROFILE%\Corundum maintenance" > nul
+xcopy "%~dp0\utility" "%USERPROFILE%\Corundum maintenance\utility" /s /e /i > nul
+copy "%~dp0\README.md" "%USERPROFILE%\Corundum maintenance" > nul
+copy "%~dp0\LICENSE" "%USERPROFILE%\Corundum maintenance" > nul
 cls
 echo Installation
 echo.
-echo Thank you for choosing Corundum! In a few moments you'll be able to enjoy Corundum directly on your computer.
+echo Thank you for choosing Corundum! In a few moments you'll be able to enjoy Corundum maintenance directly on your computer.
 echo Stay on this window, the installation won't last long!
 echo.
 echo Status: Creating the shortcut...
@@ -198,7 +198,7 @@ del "%vbs_file%" > nul
 cls
 echo Installation
 echo.
-echo Thank you for choosing Corundum! In a few moments you'll be able to enjoy Corundum directly on your computer.
+echo Thank you for choosing Corundum maintenance! In a few moments you'll be able to enjoy Corundum maintenance directly on your computer.
 echo Stay on this window, the installation won't last long!
 echo.
 echo Status: Installation completed!
@@ -209,7 +209,7 @@ goto End
 cls
 echo Installation
 echo.
-echo You are about to install Corundum in portable mode.
+echo You are about to install Corundum maintenance in portable mode.
 set /p portable_location="Enter the location: "
 
 if not exist "%portable_location%" (
@@ -220,11 +220,11 @@ if not exist "%portable_location%" (
 )
 
 mkdir "%portable_location%\Corundum" > nul
-copy "%~dp0\main.bat" "%portable_location%\Corundum" > nul
-copy "%~dp0\install.bat" "%portable_location%\Corundum" > nul
-xcopy "%~dp0\utility" "%portable_location%\Corundum\utility" /s /e /i > nul
-copy "%~dp0\README.md" "%portable_location%\Corundum" > nul
-copy "%~dp0\LICENSE" "%portable_location%\Corundum" > nul
+copy "%~dp0\main.bat" "%portable_location%\Corundum maintenance" > nul
+copy "%~dp0\install.bat" "%portable_location%\Corundum maintenance" > nul
+xcopy "%~dp0\utility" "%portable_location%\Corundum maintenance\utility" /s /e /i > nul
+copy "%~dp0\README.md" "%portable_location%\Corundum maintenance" > nul
+copy "%~dp0\LICENSE" "%portable_location%\Corundum maintenance" > nul
 echo Portable installation completed!
 timeout /t 3 > nul
 goto End
@@ -233,10 +233,10 @@ goto End
 cls
 echo Setup
 echo.
-echo Corundum is currently installed on your computer.
+echo Corundum maintenance is currently installed on your computer.
 echo Please choose the action:
-echo 1. Uninstall Corundum
-echo 2. Update Corundum
+echo 1. Uninstall Corundum maintenance
+echo 2. Update Corundum maintenance
 echo 3. Modify startup option
 set /p action="Enter your choice: "
 
@@ -252,8 +252,8 @@ cls
 echo Setup
 echo.
 echo Modify Startup Options
-echo 1. Enable Corundum on startup
-echo 2. Disable Corundum on startup
+echo 1. Enable Corundum maintenance on startup
+echo 2. Disable Corundum maintenance on startup
 set /p startup_option="Enter your choice: "
 
 if "%startup_option%"=="1" goto InstallNowShortcut
@@ -279,16 +279,16 @@ goto CorundumInstalled
 cls
 echo Setup
 echo.
-echo Please wait while Corundum is uninstalling.
+echo Please wait while Corundum maintenance is uninstalling.
 echo.
 echo Status: Uninstalling...
-rmdir /s /q "%USERPROFILE%\Corundum" > nul
+rmdir /s /q "%USERPROFILE%\Corundum maintenance" > nul
 del "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\Corundum.lnk" > nul
 del "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Enio Aiello\Corundum.lnk" > nul
 cls
 echo Setup
 echo.
-echo Please wait while Corundum is uninstalling.
+echo Please wait while Corundum maintenance is uninstalling.
 echo.
 echo Status: Uninstallation completed!
 timeout /t 3 > nul
@@ -298,17 +298,17 @@ goto End
 cls
 echo Setup
 echo.
-echo Please wait while setup is updating Corundum.
+echo Please wait while setup is updating Corundum maintenance.
 echo.
-echo Status: Updating Corundum...
-rmdir /s /q "%USERPROFILE%\Corundum\utility" > nul
-copy "%~dp0\main.bat" "%USERPROFILE%\Corundum" > nul
-copy "%~dp0\install.bat" "%USERPROFILE%\Corundum" > nul
-xcopy "%~dp0\utility" "%USERPROFILE%\Corundum\utility" /s /e /i > nul
+echo Status: Updating Corundum maintenance...
+rmdir /s /q "%USERPROFILE%\Corundum maintenance\utility" > nul
+copy "%~dp0\main.bat" "%USERPROFILE%\Corundum maintenance" > nul
+copy "%~dp0\install.bat" "%USERPROFILE%\Corundum maintenance" > nul
+xcopy "%~dp0\utility" "%USERPROFILE%\Corundum maintenance\utility" /s /e /i > nul
 cls
 echo Setup
 echo.
-echo Please wait while setup is updating Corundum.
+echo Please wait while setup is updating Corundum maintenance.
 echo.
 echo Status: Update completed!
 timeout /t 3 > nul

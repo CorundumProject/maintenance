@@ -9,7 +9,7 @@ if %errorlevel% NEQ 0 (
 
 :home
 cls
-echo Welcome to Corundum, %USERNAME%!
+echo Welcome to Corundum maintenance, %USERNAME%!
 echo What would you like to do?
 echo.
 echo 1. Cleaning the drive
@@ -23,7 +23,7 @@ echo 8. Start a program
 echo 9. Repair
 echo.
 echo v. Display version
-echo s. Corundum settings
+echo s. Corundum maintenance settings
 echo p. Power
 echo q. Quit
 echo.
@@ -1014,7 +1014,7 @@ cls
 echo Automatic repair
 echo.
 echo Please disable your antivirus before starting the automatic repair.
-echo If Corundum was not started as an administrator, please restart it as an administrator.
+echo If Corundum maintenance was not started as an administrator, please restart it as an administrator.
 echo.
 echo This will execute sfc /scannow and dism /online /cleanup-image /restorehealth.
 echo This will take a few minutes.
@@ -1043,7 +1043,7 @@ cls
 echo Manual repair
 echo.
 echo Please disable your antivirus before starting the manual repair.
-echo If Corundum was not started as an administrator, please restart it as an administrator.
+echo If Corundum maintenance was not started as an administrator, please restart it as an administrator.
 echo.
 echo Please, enter the commands you want to execute.
 echo The commands must be separated by &.
@@ -1068,7 +1068,7 @@ cls
 echo Hardware diagnosis
 echo.
 echo Please disable your antivirus before starting the hardware diagnosis.
-echo If Corundum was not started as an administrator, please restart it as an administrator.
+echo If Corundum maintenance was not started as an administrator, please restart it as an administrator.
 echo.
 echo Please select a diagnostic:
 echo.
@@ -1343,10 +1343,10 @@ goto software
 
 :displayVersion
 cls
-echo Corumdum
+echo Corumdum maintenance
 echo.
-echo Corundum is free, open-source software based on the GPL-3.0 license.
-echo Corundum is currently installed in version 1.1.1-stable.
+echo Corundum maintenance is free, open-source software based on the GPL-3.0 license.
+echo Corundum maintenance is currently installed in version 2.0.0-beta.
 echo.
 echo Press any key to return to home.
 pause > nul
@@ -1354,10 +1354,10 @@ goto home
 
 :corundumSettings
 cls
-echo Corundum settings
+echo Corundum maintenance settings
 echo.
-echo Welcome to the Corundum settings function!
-echo This function allows you to change the language or download an update for Corundum.
+echo Welcome to the Corundum maintenance settings function!
+echo This function allows you to change the language or download an update for Corundum maintenance.
 echo.
 echo 1. Change the language
 echo 2. Download an update
@@ -1377,7 +1377,7 @@ echo Change the language
 echo.
 echo Due to complication with the development, this function is currently disabled.
 echo.
-echo Press any key to return to Corundum settings.
+echo Press any key to return to Corundum maintenance settings.
 pause > nul
 goto corundumSettings
 
@@ -1402,20 +1402,20 @@ goto corundumSettings
 cls
 echo Download an update
 echo.
-echo Press any key to download the latest version of Corundum.
-echo After the download is complete, you will need to extract the archive and execute the installer to update Corundum.
+echo Press any key to download the latest version of Corundum maintenance.
+echo After the download is complete, you will need to extract the archive and execute the installer to update Corundum maintenance.
 echo.
 echo [31mPlease do not turn off your computer during the operation![0m
 pause > nul
 cls
 echo Download an update
 echo.
-echo Downloading the latest version of Corundum from GitHub, please wait.
-start https://github.com/enioaiello/corundum/releases/latest/download/corundum.zip > nul
+echo Downloading the latest version of Corundum maintenance from GitHub, please wait.
+start https://github.com/cordunum/maintenance/releases/latest/download/corundum.zip > nul
 cls
 echo Download an update
 echo.
-echo The latest version of Corundum has been downloaded successfully!
+echo The latest version of Corundum maintenance has been downloaded successfully!
 echo.
 echo Press any key to return to home.
 pause > nul
@@ -1454,7 +1454,7 @@ cls
 echo Shutdown
 echo.
 echo Your computer will shutdown in 5 seconds.
-shutdown /s /t 5 /c "Corundum: request shutdown" > nul
+shutdown /s /t 5 /c "Corundum maintenance: request shutdown" > nul
 exit
 
 :restartOption
@@ -1469,7 +1469,7 @@ cls
 echo Restart
 echo.
 echo Your computer will restart in 5 seconds.
-shutdown /r /t 5 /c "Corundum: request restart" > nul
+shutdown /r /t 5 /c "Corundum maintenance: request restart" > nul
 exit
 
 :logoffOption
@@ -1484,7 +1484,7 @@ cls
 echo Logoff
 echo.
 echo Your computer will logoff in 5 seconds.
-shutdown /l /t 5 /c "Corundum: request logoff" > nul
+shutdown /l /t 5 /c "Corundum maintenance: request logoff" > nul
 exit
 
 :triggerBsod
