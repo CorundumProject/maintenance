@@ -1,0 +1,5 @@
+TODO
+
+- Update the "install.bat" file: add the ability to download the install.bat THEN download and install Corundum maintenance
+- Add the news features
+- Modify the website
