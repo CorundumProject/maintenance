@@ -1,6 +1,6 @@
-# Corundum
+# Corundum maintenance
 
-## Simple maintenance and administrative scripts for Windows 10 and 11
+## Simple script for Windows Microsoft Windows
 
 **Corundum maintenance** is a fantastic script for Microsoft Windows 10 and 11, enabling you to administer and maintain your workstation.
 
