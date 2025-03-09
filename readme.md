@@ -1,17 +1,48 @@
-# Corundum
-## Simple maintenance and administrative scripts for Windows 10 and 11
-**Corundum** is a fantastic script for Microsoft Windows 10 and 11, enabling you to administer and maintain your workstation.
-### Benefits
+<p align="center">
+<img src="assets/img/logo.png" height="128px">
+</p>
+
+<h1 align="center">Corundum maintenance</h1>
+
+**Corundum maintenance** is a fantastic script for Microsoft Windows, enabling you to administer and maintain your workstation.
+
+> A redesign is underway.
+
+## How to use
+
+### Via Powershell (recommended)
+
+Simply copy and paste this command line into a Powershell terminal as administrator.
+
+```powershell
+Start-Process powershell -ArgumentList "Invoke-Expression (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/corundumproject/maintenance/main/install.bat').Content" -Verb runAs
+```
+
+### Via download
+
+Go to [releases](https://github.com/CorundumProject/maintenance/releases/) and download the latest version.
+
+## Benefits
+
 - Free
 - Open-source
 - Can be installed or used in portable mode
-- Compatible from Windows 10 21h2 to Windows 11 24h2
-### Functions
+
+## Functions
+
 - Disk cleaning
-- User management
-- Windows and program updates
+- User account management
+- Software management
 - Service management
 - KMS management
-- adwcleaner integration
-- Starting executables
-- Custom utilities (bat, ps1 and exe formats)
+- Utilities launcher
+- Repair function
+
+## Compatibility
+
+| Operating system | Compatible?               |
+|------------------|---------------------------|
+| Windows 11       | ✅                         |
+| Windows 10       | ✅                         |
+| Windows 8.1      | ⚠️ (Require dependencies) |
+| Windows 7        | ⚠️ (Require dependencies) |
